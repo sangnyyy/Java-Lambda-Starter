@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
+
         /*
         * Make a thread with Traditional Code
         * */
@@ -19,5 +20,12 @@ public class Main {
         Thread th2 = new Thread(() -> System.out.println("Hello World!"));
 
         th2.start();
+
+        /*--------------------------------------------------------------------------*/
+
+        Func add = (int a, int b) -> a + b;
+        Func subtr = (int a, int b) -> a - b;
+        System.out.println("add : " + add.calc(10, 5));
+        System.out.println("subtr : " + subtr.calc(10, 5));
     }
 }
